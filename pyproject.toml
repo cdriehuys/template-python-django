@@ -9,6 +9,7 @@ packages = [{include = "template_python_django"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.1.7"
+psycopg2 = "^2.9.5"
 
 
 [tool.poetry.group.dev.dependencies]
