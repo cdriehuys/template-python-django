@@ -1,0 +1,21 @@
+# Version Control Info
+.git
+
+# Python Cache
+*.pyc
+*.pyd
+*.pyo
+__pycache__
+
+# Third-Party Dependencies
+.venv
+node_modules
+
+# Build Artifacts
+**/static/css/dist/
+
+# Development Files
+.devcontainer
+.github
+.vscode
+poetry.toml

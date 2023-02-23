@@ -14,6 +14,8 @@ RUN python3 -m venv ${POETRY_HOME} \
     && ${POETRY_HOME}/bin/poetry completions bash > /etc/bash_completion.d/poetry \
     && su vscode -c 'echo "PATH=$PATH:${POETRY_HOME}/bin" >> ~/.bashrc'
 
+RUN pip3 --disable-pip-version-check --no-cache-dir install pre-commit
+
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 # COPY requirements.txt /tmp/pip-tmp/
