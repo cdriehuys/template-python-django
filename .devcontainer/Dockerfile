@@ -8,6 +8,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 ARG NODE_VERSION="none"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
+ENV GIT_EDITOR="code --wait"
+
 ARG POETRY_HOME=/opt/poetry
 RUN python3 -m venv ${POETRY_HOME} \
     && ${POETRY_HOME}/bin/pip install poetry==1.2.0 \
